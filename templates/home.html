@@ -1,7 +1,14 @@
 {% extends "layout.html" %}
 {% block content %}
 <div class="home">
-    <h1>My homepage</h1>
-    <p>This is a test website</p>
+    <h1>SpaceX Data</h1>
+    <p>This website uses Flask to display Data provided by SpaceX</p>
+    <h3>Latest Launches</h3>
+        <h5>Flight Number: {{response["flight_number"]}}</h5>
+        <h5>Mission Name: {{response["mission_name"]}}</h5>
+        <h5>Launch Year: {{response["launch_year"]}}</h5>
+        <h5>Launch Success: {{response['launch_success']}}</h5>
+        <p>Details: {{response['details']}}</p>
+        
 </div>
 {% endblock %}

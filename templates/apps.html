@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="about">
+    <h1>SpaceX Mission</h1>
+    <p>Displaying SpaceX Past and Future Missions</p>
+    {% for r in response %}
+    <h3>{{r["mission_name"]}}</h3>
+    <p>{{r.description}}</p>
+    <a href={{r.wikipedia}} target="_blank">Wikipedia</a>
+    <span>&nbsp;</span>
+    <a href={{r.website}} target="_blank">Website</a>
+    {% endfor %}
+</div>
+{% endblock %}
